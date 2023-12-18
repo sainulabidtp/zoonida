@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>List of Shortened URLS:</h3>
+<ul>
+    {% for shortened_url in shortenend_urls %}
+    <li><a href="{% url 'view_url' shortened_url.short_code %}">{{ shortened_url.short_code }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
